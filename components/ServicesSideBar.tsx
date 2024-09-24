@@ -1,8 +1,7 @@
 "use client"
-import { isActive } from '@/lib/activeLink';
 import { ourServicesItems } from '@/lib/data';
-import { div } from 'framer-motion/client';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 import { BiSupport } from 'react-icons/bi';
 import { FaArrowRight } from 'react-icons/fa6';
@@ -10,6 +9,12 @@ import { GoMail } from 'react-icons/go';
 import { LuPhone } from 'react-icons/lu';
 
 const ServicesSideBar = () => {
+    const isActive = (link: string) => {
+        const pathname = usePathname();
+        console.log(pathname)
+        return pathname === link;
+
+    }
     return (
         <div className='flex flex-col gap-5'>
             <div className='flex flex-col gap-5 p-5 bg-slate-50 rounded-md shadow-md'>

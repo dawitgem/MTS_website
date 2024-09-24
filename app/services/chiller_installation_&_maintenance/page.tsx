@@ -42,12 +42,12 @@ const chillerServices = [
 ];
 
 
-const chiller = {
-    title: " Chiller Installation and Maintenance Services",
-    what: " Chiller installation and maintenance involve designing, installing, and servicing chiller systems that remove heat from liquids through refrigeration cycles. These systems are crucial for providing cooling in various applications, ensuring optimal performance, efficiency, and reliability.",
-    aboutus: "MTS specializes in comprehensive chiller installation and maintenance services. Our team of qualified professionals has extensive experience in designing and installing chiller systems tailored for residential, commercial, and industrial settings. We ensure seamless integration and efficient operation of chillers, helping clients achieve their cooling objectives.",
-}
-const mainImage = "https://www.web1.mtstradingplc.com/wp-content/uploads/2024/02/Chiller-Instalation.jpg"
+// const chiller = {
+//     title: " Chiller Installation and Maintenance Services",
+//     what: " Chiller installation and maintenance involve designing, installing, and servicing chiller systems that remove heat from liquids through refrigeration cycles. These systems are crucial for providing cooling in various applications, ensuring optimal performance, efficiency, and reliability.",
+//     aboutus: "MTS specializes in comprehensive chiller installation and maintenance services. Our team of qualified professionals has extensive experience in designing and installing chiller systems tailored for residential, commercial, and industrial settings. We ensure seamless integration and efficient operation of chillers, helping clients achieve their cooling objectives.",
+// }
+// const mainImage = "https://www.web1.mtstradingplc.com/wp-content/uploads/2024/02/Chiller-Instalation.jpg"
 
 
 const Page = () => {

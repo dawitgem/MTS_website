@@ -69,7 +69,7 @@ const Page = () => {
                             deposits that can negatively affect the beer's taste,
                             appearance, and aroma. By keeping the lines clean, the beer
                             remains fresh and bacteria-free, ensuring a great-tasting
-                            product every time it’s served.
+                            product every time it&apos;s served.
                         </p>
                     </section>
 

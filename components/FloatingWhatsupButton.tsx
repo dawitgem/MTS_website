@@ -6,7 +6,6 @@ import { RiWhatsappFill } from "react-icons/ri";
 
 const FloatingWhatsAppButton: FC = () => {
     const whatsappNumber = "+251913176534"; // Replace with your WhatsApp number
-    const [isHovered, setIsHovered] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const [isBgVisible, setIsBgVisible] = useState(false); // For background toggle
     const [isSmallDevice, setIsSmallDevice] = useState(false); // To track if it's a small device
@@ -41,7 +40,6 @@ const FloatingWhatsAppButton: FC = () => {
 
     const handleMouseEnter = () => {
         if (!isSmallDevice) {
-            setIsHovered(true);
             setIsVisible(true);
             setIsBgVisible(true);
         }
@@ -49,7 +47,6 @@ const FloatingWhatsAppButton: FC = () => {
 
     const handleMouseLeave = () => {
         if (!isSmallDevice) {
-            setIsHovered(false);
             setIsVisible(false);
             setIsBgVisible(false);
         }

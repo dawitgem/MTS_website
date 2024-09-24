@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { TypewriterEffectSmooth } from "./TextReveal";
 import { HeroHighlight, Highlight } from "../hero-highlight";
 
 const images = [
@@ -34,7 +33,7 @@ export const ImagesSlider = ({
     className?: string;
     autoplay?: boolean;
 }) => {
-    const [loading, setLoading] = useState(false);
+    // const [loading, setLoading] = useState(false);
     const [loadedImages, setLoadedImages] = useState<string[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState(0);
@@ -58,7 +57,7 @@ export const ImagesSlider = ({
     }, []);
 
     const loadImages = () => {
-        setLoading(true);
+        // setLoading(true);
         const loadPromises = images.map((image) => {
             return new Promise((resolve, reject) => {
                 const img = new Image();
@@ -71,7 +70,7 @@ export const ImagesSlider = ({
         Promise.all(loadPromises)
             .then((loadedImages) => {
                 setLoadedImages(loadedImages as string[]);
-                setLoading(false);
+                // setLoading(false);
             })
             .catch((error) => console.error("Failed to load images", error));
     };
@@ -184,7 +183,7 @@ export const ImagesSlider = ({
                                 <br />
                                 {Array.isArray(heroTexts[currentIndex])
                                     ? heroTexts[currentIndex].map((text, idx) => (
-                                        <Highlight className="text-slate-300 dark:text-white w-full break-words">
+                                        <Highlight key={idx} className="text-slate-300 dark:text-white w-full break-words">
                                             <span key={idx}>{text}</span><br />
                                         </Highlight>
                                     ))

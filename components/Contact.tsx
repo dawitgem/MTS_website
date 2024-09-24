@@ -1,7 +1,8 @@
 "use client";
-import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React from 'react';
+// import React, { useEffect } from 'react';
+// import { useAnimation } from 'framer-motion';
+// import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GoMail } from 'react-icons/go';
@@ -10,26 +11,27 @@ import { LuPhone } from 'react-icons/lu';
 import becustomer from "../public/assets/be_customer.png"
 
 const Contact = () => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
-  const controls = useAnimation();
+  // const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+  // const controls = useAnimation();
+  // ref()
 
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [inView, controls]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     controls.start('visible');
+  //   }
+  // }, [inView, controls]);
 
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: 'easeOut',
-      },
-    },
-  };
+  // const containerVariants = {
+  //   hidden: { opacity: 0, y: 50 },
+  //   visible: {
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: {
+  //       duration: 0.8,
+  //       ease: 'easeOut',
+  //     },
+  //   },
+  // };
 
   return (
     <div className='w-full h-full relative flex flex-col lg:flex-row gap-10 items-center justify-center align-middle mb-5  '>

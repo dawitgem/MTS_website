@@ -12,7 +12,6 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
 
@@ -83,7 +82,7 @@ export function Navbar() {
 const ListItem = React.forwardRef<
     React.ElementRef<"a">,
     React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+>(({ className, title, ...props }, ref) => {
     return (
         <li>
             <NavigationMenuLink asChild>

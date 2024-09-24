@@ -1,9 +1,7 @@
+import React from 'react'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
 import Logo from "../public/assets/logo.png"
 import Image from 'next/image'
-import { links } from '@/lib/data'
-import { Button } from './ui/button'
 import * as motion from "framer-motion/client"
 import { Navbar } from './Navbar'
 import { MobileNavBar } from './MobileNavBar'

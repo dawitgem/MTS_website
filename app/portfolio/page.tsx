@@ -2,7 +2,6 @@
 import PageHero from '@/components/PageHero'
 import React from 'react'
 import * as motion from "framer-motion/client"
-import MainProjects from '@/components/MainProjects';
 
 const revealVariant = {
     hidden: { opacity: 0, y: 50 },
@@ -53,7 +52,6 @@ import {
     Dialog,
     DialogContent,
     DialogDescription,
-    DialogFooter,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
@@ -73,7 +71,7 @@ const ProjectGrid = () => {
     );
 };
 
-const ProjectCard = ({ project, className }: any) => {
+const ProjectCard = ({ project, className }: { project: any, className: any }) => {
     const { ref, inView } = useInView({
         threshold: 0.1,
     });
@@ -96,7 +94,7 @@ const ProjectCard = ({ project, className }: any) => {
     );
 };
 
-const ProjectDialog = ({ project }: any) => {
+const ProjectDialog = ({ project }: { project: any }) => {
     return (
         <Dialog>
             <DialogTrigger asChild>

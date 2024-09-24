@@ -1,34 +1,6 @@
 
 import React from 'react'
 import { ImagesSlider } from "./ui/backgroundImageSlider";
-import { TypewriterEffectSmooth } from "./ui/TextReveal";
-
-const words = [
-    {
-        text: "Welcome To",
-        className: "text-slate-100 dark:text-blue-500",
-
-
-    },
-    {
-        text: "MTS",
-        className: "text-primary dark:text-blue-500",
-    },
-    {
-        text: ", We",
-        className: "text-slate-100 dark:text-blue-500",
-
-    },
-    {
-        text: "Clean ",
-        className: "text-primary dark:text-blue-500",
-
-    },
-    {
-        text: "Because We Care",
-        className: "text-slate-100",
-    },
-];
 
 const Hero = () => {
     return (

@@ -1,6 +1,5 @@
 import ContactForm from '@/components/ContactForm'
 import PageHero from '@/components/PageHero'
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { FaPhoneAlt } from 'react-icons/fa'

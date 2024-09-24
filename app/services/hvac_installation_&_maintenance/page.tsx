@@ -1,6 +1,5 @@
 import PageHero from '@/components/PageHero';
 import ServicesSideBar from '@/components/ServicesSideBar';
-import { div } from 'framer-motion/client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoCheckmarkOutline } from "react-icons/io5"

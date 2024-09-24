@@ -84,7 +84,7 @@ const Page = () => {
           <section className="w-full text-md text-gray-600 mt-8 space-y-6">
             <h1 className="text-3xl font-extrabold text-gray-700">About Us</h1>
             <p>
-              At MTS Trading PLC, we are experts in providing high-quality cooler and refrigeration installation, maintenance, and repair services. With our extensive experience and a team of certified professionals, we ensure the optimal performance of your cooling systems. We are committed to delivering efficient and reliable service to prevent costly breakdowns, reduce energy consumption, and ensure your refrigeration equipment operates smoothly. Whether it's the installation of new systems or ongoing maintenance, MTS Trading PLC offers comprehensive solutions tailored to your unique needs.
+              At MTS Trading PLC, we are experts in providing high-quality cooler and refrigeration installation, maintenance, and repair services. With our extensive experience and a team of certified professionals, we ensure the optimal performance of your cooling systems. We are committed to delivering efficient and reliable service to prevent costly breakdowns, reduce energy consumption, and ensure your refrigeration equipment operates smoothly. Whether it&apos;s the installation of new systems or ongoing maintenance, MTS Trading PLC offers comprehensive solutions tailored to your unique needs.
             </p>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
               <Image

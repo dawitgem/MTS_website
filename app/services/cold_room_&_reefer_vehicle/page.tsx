@@ -47,7 +47,7 @@ const Page = () => {
     <div className="w-full flex flex-col gap-20">
       {/* Page Hero */}
       <PageHero
-        img="https://www.web1.mtstradingplc.com/wp-content/uploads/2024/04/Cold-Room-Service-00.jpg"
+        img="https://png.pngtree.com/thumb_back/fh260/background/20230524/pngtree-open-glass-shelving-freezers-in-an-empty-cold-room-image_2613633.jpg"
         page="services"
         title="Cold Room and Reefer Vehicle Installation and Maintenance"
       />
@@ -83,8 +83,9 @@ const Page = () => {
           <section className="w-full text-md text-gray-600 mt-8 space-y-6">
             <h1 className="text-3xl font-extrabold text-gray-700">About Us</h1>
             <p>
-              At MTS Trading PLC, we specialize in providing comprehensive solutions for cold rooms and reefer vehicles. With an experienced team and a commitment to industry excellence, we design and install cold rooms with precise temperature control, insulation, and humidity management, tailored to your needs. Our expert maintenance services guarantee that your equipment operates at peak efficiency, minimizing downtime and extending its lifespan. Whether it's for food storage, pharmaceuticals, or other temperature-sensitive products, MTS delivers solutions that meet the highest standards of quality and reliability.
+              At MTS Trading PLC, we specialize in providing comprehensive solutions for cold rooms and reefer vehicles. With an experienced team and a commitment to industry excellence, we design and install cold rooms with precise temperature control, insulation, and humidity management, tailored to your needs. Our expert maintenance services guarantee that your equipment operates at peak efficiency, minimizing downtime and extending its lifespan. Whether it&apos;s for food storage, pharmaceuticals, or other temperature-sensitive products, MTS delivers solutions that meet the highest standards of quality and reliability.
             </p>
+
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
               <Image

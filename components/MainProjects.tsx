@@ -2,21 +2,10 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { LayoutGrid } from './ui/layout-grid';
 import Link from 'next/link';
 
 
-const itemVariant = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 0.6,
-            ease: 'easeOut',
-        },
-    },
-};
+
 
 const MainProjects = () => {
     const [ref, inView] = useInView({ triggerOnce: true });
@@ -58,7 +47,7 @@ const MainProjects = () => {
                 initial="hidden"
                 animate={controls}
             >
-                <LayoutGrid cards={cards} />
+
 
 
             </motion.div>
@@ -100,13 +89,6 @@ const Project4 = () => {
 const Project5 = () => {
     return <div className='text-white flex flex-col gap-2'>
         <h3 className='text-2xl font-bold'>HVAC-R Installation for Ethiopian Airlines</h3>
-        <p></p>
-        <Link href={"/portfolio"} className=' font-bold text-primary hover:text-white'>Read more</Link>
-    </div>
-}
-const Project6 = () => {
-    return <div className='text-white flex flex-col gap-2'>
-        <h3 className='text-2xl font-bold'>Draft-Beer line  cleaning for BGI Ethiopia</h3>
         <p></p>
         <Link href={"/portfolio"} className=' font-bold text-primary hover:text-white'>Read more</Link>
     </div>

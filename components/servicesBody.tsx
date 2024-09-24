@@ -1,6 +1,3 @@
-import PageHero from '@/components/PageHero';
-import ServicesSideBar from '@/components/ServicesSideBar';
-import { div } from 'framer-motion/client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoCheckmarkOutline } from "react-icons/io5"
@@ -54,6 +51,7 @@ const ServiceBody = ({ serviceItem, services, process, mainImage, additionalImag
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                         {additionalImages.map((img, idx) =>
                             <Image
+                                key={idx}
                                 src={img}
                                 alt="draft-line cleaning"
                                 width={500}

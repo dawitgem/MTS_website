@@ -8,23 +8,23 @@ import { Toaster } from "@/components/ui/toaster";
 
 
 
-const poppins = localFont({
-  src: "../public/fonts/Poppins-Regular.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+// const poppins = localFont({
+//   src: "../public/fonts/Poppins-Regular.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
 
-})
+// })
 
-const geistSans = localFont({
-  src: "../public/fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "../public/fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+// const geistSans = localFont({
+//   src: "../public/fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "../public/fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
 
 export const metadata: Metadata = {
   title: `MTS - We Clean Because We Care`,

@@ -1,13 +1,10 @@
 "use client";
-
-import Hero from '@/components/Hero';
 import PageHero from '@/components/PageHero';
 import React from 'react';
-import { delay, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import OurserviceGrid from '@/components/OurserviceGrid';
 import { featuredServices } from '@/lib/data';
 import Link from 'next/link';
-import Testimonials from '@/components/Testimonials';
 import commitment from "../../public/assets/commitment.svg";
 import workforce from "../../public/assets/workforce.svg";
 import approach from "../../public/assets/approach.svg";
@@ -113,6 +110,10 @@ const ourPartners = [{
     icon: industry,
     title: "Manufacturing Industries"
 }, {
+    icon: govt,
+    title: "Governmental Offices"
+},
+{
     icon: hospital,
     title: "Hospitals"
 }, {

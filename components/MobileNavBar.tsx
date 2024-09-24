@@ -4,10 +4,10 @@ import { useState } from "react"
 import { HiMenuAlt3 } from "react-icons/hi"
 import { TfiClose } from "react-icons/tfi"
 import Link from "next/link"
-import { isActive } from "@/lib/activeLink"
+import { usePathname } from "next/navigation"
 
 // Custom Modal Component
-const CustomModal = ({ isOpen, onClose, children }: any) => {
+const CustomModal = ({ isOpen, onClose, children }: { isOpen: any, onClose: any, children: any }) => {
     if (!isOpen) return null;
 
     return (
@@ -29,6 +29,12 @@ const CustomModal = ({ isOpen, onClose, children }: any) => {
 
 export function MobileNavBar() {
     const [isOpen, setIsOpen] = useState(false);
+    const isActive = (link: string) => {
+        const pathname = usePathname();
+        console.log(pathname)
+        return pathname === link;
+
+    }
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
