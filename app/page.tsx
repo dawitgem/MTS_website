@@ -1,101 +1,89 @@
+import Contact from "@/components/Contact";
+import Hero from "@/components/Hero";
+import MainAboutUs from "@/components/MainAboutUs";
+import MainProjects from "@/components/MainProjects";
+import MainServicesGrid from "@/components/MainServicesGrid";
+import OurserviceGrid from "@/components/OurserviceGrid";
+import Partners from "@/components/Partners_scroll";
+import Testimonials from "@/components/Testimonials";
+import { TypewriterEffectSmooth } from "@/components/ui/TextReveal";
+import WhychooseUs from "@/components/WhychooseUs";
+import { featuredServices } from "@/lib/data";
 import Image from "next/image";
+import Link from "next/link";
+import repare from "../public/assets/cooling_repair_maintenance.png"
+import bgi from "../public/assets/bgi_logo.png"
+
+
+const words = [
+  {
+    text: "Welcome to",
+    className: "text-extrabold text-gray-600   text-xl lg:text-5xl"
+
+
+
+
+  },
+  {
+    text: "MTS",
+    className: "text-primary font-extrabold text-xl lg:text-5xl"
+
+  },
+  {
+    text: "Trading",
+    className: "text-extrabold text-gray-600   text-xl lg:text-5xl"
+
+
+
+  },
+  {
+    text: "PLC",
+    className: "text-extrabold text-gray-600   text-xl lg:text-5xl"
+
+  }
+];
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <main className="flex flex-col gap-20  w-screen overflow-x-hidden   ">
+      <Hero />
+      <div className="mt-16 px-5 lg:px-20 py-10 w-full relative  flex flex-col justify-center align-middle items-center ">
+        <TypewriterEffectSmooth words={words} className="" cursorClassName="bg-transparent" />
+        <div className='flex flex-col gap-8 justify-center items-center p-4  bg-slate-100'>
+          <h3 className='text-md font-semibold text-primary'>Feature services</h3>
+          <h1 className='text-2xl md:text-3xl font-extrabold text-gray-600 text-center '> A Wide Range of Cooling and cleaning services</h1>
+          <div className='w-full flex flex-col gap-5 justify-center items-center'>
+            <OurserviceGrid ourServicesItems={featuredServices} />
+            <Link href={"/services"} className='bg-primary p-4 text-md font-semibold text-white rounded-md'>More Services</Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+      <MainAboutUs />
+      <div className="w-full bg-slate-200 text-white flex  flex-col md:flex-row justify-center items-center px-1 md:px-5 lg:px-10 ">
+        <Image src={repare} alt="repaire" width={800} height={800} className="w-full h-full" />
+        <div className="flex flex-col gap-2 w-full">
+          <h1 className='text-2xl md:text-3xl font-extrabold text-gray-600 text-center '> Wherever You Bought It,<br /> We Can <span className="text-primary"> Install</span> and <span className="text-primary"> Fix It!</span></h1>
+          <p className="text-center text-md text-gray-500 ">From expert installation to reliable repairs, trust us to handle your cooling and cleaning systems—no matter where they came from!</p>
+
+
+        </div>
+      </div>
+      <MainProjects />
+      <div className="w-full bg-slate-200 text-white flex  flex-col md:flex-row justify-center items-center px-1 md:px-5 lg:px-10 ">
+        <Image src={bgi} alt="repaire" width={800} height={800} className="w-full h-full" />
+        <div className="flex flex-col gap-2 w-full">
+          <h1 className='text-2xl md:text-3xl font-extrabold text-gray-600 text-center '>
+            Exclusive Draft beer line cleaning agent for <span className='text-primary'>BGI Ethiopia</span> </h1>
+          <p className="text-center text-md text-gray-500 ">Our exclusive draft beer line cleaning agent ensures optimal hygiene and taste, maintaining the quality BGI Ethiopia is renowned for</p>
+
+
+        </div>
+      </div>
+      <Partners />
+      <Testimonials />
+      <Contact />
+
+    </main>
   );
 }
