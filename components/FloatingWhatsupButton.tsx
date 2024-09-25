@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import { RiWhatsappFill } from "react-icons/ri";
 
 const FloatingWhatsAppButton: FC = () => {
-    const whatsappNumber = "+251913176534"; // Replace with your WhatsApp number
+    const whatsappNumber = "+251 930 29 48 60"; // Replace with your WhatsApp number
     const [isVisible, setIsVisible] = useState(false);
     const [isBgVisible, setIsBgVisible] = useState(false); // For background toggle
     const [isSmallDevice, setIsSmallDevice] = useState(false); // To track if it's a small device
@@ -53,46 +53,48 @@ const FloatingWhatsAppButton: FC = () => {
     };
 
     return (
-        <motion.div
-            className="fixed bottom-5 right-10 z-50 rounded-full p-2 flex justify-center items-center align-middle gap-2"
-            initial={{ backgroundColor: "transparent" }} // Initial background state
-            animate={{ backgroundColor: isBgVisible ? "#ffffff" : "transparent" }} // Animate background for non-small devices
-            transition={{ duration: 0.3 }} // Smooth background transition
-        >
-            {/* Hidden text with animation - hidden on small screens */}
-            {!isSmallDevice && (
-                <motion.div
-                    className={`text-md font-bold text-gray-600 ${isVisible ? "block" : "hidden"} hidden sm:block`} // Hide on small screens
-                    initial={{ opacity: 0, y: 20 }} // Start with opacity 0 and move from below
-                    animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }} // Animate to opacity 1 and slide up
-                    transition={{ type: "spring", stiffness: 200, damping: 20 }} // Smooth spring animation
-                >
-                    Chat with us on WhatsApp
-                </motion.div>
-            )}
-
-            <a
-                href={`https://wa.me/${whatsappNumber}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Call us on WhatsApp"
+        <div className="max-w-screen-xl  relative mx-auto">
+            <motion.div
+                className="fixed bottom-0 right-10 z-50 rounded-full p-2 flex justify-center items-center align-middle gap-2"
+                initial={{ backgroundColor: "transparent" }} // Initial background state
+                animate={{ backgroundColor: isBgVisible ? "#ffffff" : "transparent" }} // Animate background for non-small devices
+                transition={{ duration: 0.3 }} // Smooth background transition
             >
-                <motion.div
-                    className="relative p-1"
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                    whileHover={!isSmallDevice ? { scale: 1.1 } : {}} // Button scales on hover for non-small devices
-                >
-                    {/* WhatsApp Button */}
-                    <Button
-                        size="icon"
-                        className="w-18 h-18 text-white rounded-full bg-white transition-all"
+                {/* Hidden text with animation - hidden on small screens */}
+                {!isSmallDevice && (
+                    <motion.div
+                        className={`text-md font-bold text-gray-600 ${isVisible ? "block" : "hidden"} hidden sm:block`} // Hide on small screens
+                        initial={{ opacity: 0, y: 20 }} // Start with opacity 0 and move from below
+                        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }} // Animate to opacity 1 and slide up
+                        transition={{ type: "spring", stiffness: 200, damping: 20 }} // Smooth spring animation
                     >
-                        <RiWhatsappFill size={60} className="text-green-500" />
-                    </Button>
-                </motion.div>
-            </a>
-        </motion.div>
+                        Chat with us on WhatsApp
+                    </motion.div>
+                )}
+
+                <a
+                    href={`https://wa.me/${whatsappNumber}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Call us on WhatsApp"
+                >
+                    <motion.div
+                        className="relative p-1"
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        whileHover={!isSmallDevice ? { scale: 1.1 } : {}} // Button scales on hover for non-small devices
+                    >
+                        {/* WhatsApp Button */}
+                        <Button
+                            size="icon"
+                            className="w-18 h-18 text-white rounded-full bg-white transition-all"
+                        >
+                            <RiWhatsappFill size={60} className="text-green-500" />
+                        </Button>
+                    </motion.div>
+                </a>
+            </motion.div>
+        </div>
     );
 };
 

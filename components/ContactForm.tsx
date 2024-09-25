@@ -5,7 +5,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Button } from './ui/button';
-import { Toast } from './ui/toast';
 import { useToast } from '@/hooks/use-toast';
 import { sendEmail } from '@/lib/sendEmail';
 

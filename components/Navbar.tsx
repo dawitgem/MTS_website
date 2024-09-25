@@ -46,35 +46,33 @@ const serviceItems = [
 export function Navbar() {
 
     return (
-        <nav className='hidden lg:block  top-0 '>
-            <ul className=' flex flex-wrap items-center  justify-end gap-10  w-full md:text-slate-600 text-[17px] font-bold'>
-                <Link href={"/"} className='hover:text-primary'>Home</Link>
-                <Link href={"/about"} className='hover:text-primary'>About </Link>
-                <NavigationMenu>
-                    <NavigationMenuList>
-                        <NavigationMenuItem>
-                            <NavigationMenuTrigger className="tmd:text-slate-600 text-[17px] font-bold hover:text-primary">
-                                <Link href={"/services"} className='hover:text-primary'>Services</Link></NavigationMenuTrigger>
-                            <NavigationMenuContent className="bg-slate-100">
-                                <ul className="p-6 md:w-[400px] lg:w-[450px] ">
-                                    {serviceItems.map((item, index) =>
-                                        <ListItem key={index} href={item.href} title={item.title}>
-                                        </ListItem>
-                                    )}
+        <ul className='hidden lg:flex  items-center  justify-end gap-10   md:text-slate-600 text-[17px] font-bold'>
+            <Link href={"/"} className='hover:text-primary'>Home</Link>
+            <Link href={"/about"} className='hover:text-primary'>About </Link>
+            <NavigationMenu>
+                <NavigationMenuList>
+                    <NavigationMenuItem>
+                        <NavigationMenuTrigger className="md:text-slate-600 text-[17px] font-bold hover:text-primary">
+                            <Link href={"/services"} className='hover:text-primary'>Services</Link></NavigationMenuTrigger>
+                        <NavigationMenuContent className="bg-slate-100">
+                            <ul className="p-6 md:w-[400px] lg:w-[450px] ">
+                                {serviceItems.map((item, index) =>
+                                    <ListItem key={index} href={item.href} title={item.title}>
+                                    </ListItem>
+                                )}
 
-                                </ul>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
-                    </NavigationMenuList>
-                </NavigationMenu>
-                <Link href={"/portfolio"} className='hover:text-primary'>Portfolio </Link>
-                <Link href={"/contact"} className='hover:text-primary'>Contact </Link>
-                <Link href={"/contact"} className=" hidden md:block ml-6 self-end justify-self-end px-6 py-4  group relative overflow-hidden rounded-lg bg-primary  text-sm text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-primary hover:to-primary/65 hover:ring-2 hover:ring-primary hover:ring-offset-2">
-                    <span className="ease absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-700 group-hover:-translate-x-40"></span>
-                    <span className="relative">Request Services</span>
-                </Link>
-            </ul>
-        </nav>
+                            </ul>
+                        </NavigationMenuContent>
+                    </NavigationMenuItem>
+                </NavigationMenuList>
+            </NavigationMenu>
+            <Link href={"/portfolio"} className='hover:text-primary'>Portfolio </Link>
+            <Link href={"/contact"} className='hover:text-primary'>Contact </Link>
+            <Link href={"/contact"} className=" hidden md:block ml-6 self-end justify-self-end px-6 py-4  group relative overflow-hidden rounded-lg bg-primary  text-sm text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-primary hover:to-primary/65 hover:ring-2 hover:ring-primary hover:ring-offset-2">
+                <span className="ease absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-700 group-hover:-translate-x-40"></span>
+                <span className="relative">Request Services</span>
+            </Link>
+        </ul>
 
     )
 }
@@ -89,7 +87,7 @@ const ListItem = React.forwardRef<
                 <a
                     ref={ref}
                     className={cn(
-                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors text-slate-700 hover:bg-slate-50/90 hover:text-primary focus:bg-slate-50/90 focus:text-primary",
+                        " relative z-10 block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors text-slate-700 hover:bg-slate-50/90 hover:text-primary focus:bg-slate-50/90 focus:text-primary",
                         className
                     )}
                     {...props}

@@ -19,7 +19,7 @@ export const sendEmail = async (formData: any) => {
         // Sending email
         await transporter.sendMail({
             from: `"${name}" <${email}>`,
-            to: 'dawitgem@gmail.com', // Replace with your email
+            to: 'mtstradingplc@gmail.com', // Replace with your email
             subject: subject || 'No Subject',
             text: message,
             html: `<p>${message}</p>`,

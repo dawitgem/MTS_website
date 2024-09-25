@@ -25,6 +25,7 @@ import Image from 'next/image';
 import becustomer from "../../public/assets/be_customer.png"
 import { GoMail } from 'react-icons/go';
 import { LuPhone } from 'react-icons/lu';
+import Contact from '@/components/Contact';
 
 const whyUs = [
     {
@@ -141,15 +142,15 @@ const page = () => {
     };
 
     return (
-        <div className="w-full flex flex-col gap-24 bg-white">
-            <PageHero img='https://www.web1.mtstradingplc.com/wp-content/uploads/2024/04/MTS-Team.png' page='about' title='About Us' />
+        <div className="flex flex-col gap-24 bg-white">
 
-            <div className='mt-10 flex gap-8 md:flex-row flex-col justify-between p-10  '>
+            <PageHero img='https://www.web1.mtstradingplc.com/wp-content/uploads/2024/04/MTS-Team.png' page='about' title='About Us' />
+            <div className='relative max-w-screen-[1440px] mx-auto w-full mt-10 flex gap-8 md:flex-row flex-col justify-between p-10 overflow-hidden '>
                 <motion.div
-                    variants={{ hidden: { opacity: 0, x: -100 }, visible: { opacity: 1, x: 0 } }}
+                    variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0 } }}
                     initial="hidden"
                     whileInView="visible"
-                    className="flex flex-col gap-8 w-full flex-wrap"
+                    className="flex flex-col gap-8 w-full "
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
@@ -159,7 +160,7 @@ const page = () => {
                     <p className='text-md text-gray-700 font-medium'>The provision of cleaning and maintenance service is one of our premier specialties. Over two decades working with the brewery industry, we have rich and practical experience especially in providing cost-effective solutions in handling cooler preventive maintenance processes. We have built a trusted name in quality service delivery in this regard. MTS trading plc strives to maintain the highest quality service that includes continuous training.</p>
                 </motion.div>
                 <motion.div
-                    variants={{ hidden: { opacity: 0, x: 100 }, visible: { opacity: 1, x: 0 } }}
+                    variants={{ hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0 } }}
                     initial="hidden"
                     whileInView="visible"
                     className="relative z-50 w-full h-full lg:block flex flex-col   "
@@ -183,113 +184,97 @@ const page = () => {
                         </div>
                     </div>
 
-
-
                 </motion.div>
             </div>
-
-            <div className='flex flex-col gap-8 justify-center items-center p-4  border-green-500'>
-                <h3 className='text-md font-semibold text-primary'>Feature services</h3>
-                <h1 className='text-3xl font-extrabold text-gray-600 text-center'>Setting the Standard <br /> for Excellence <br />in Ethiopia</h1>
-                <div className='flex flex-col gap-5 justify-center items-center'>
-                    <OurserviceGrid ourServicesItems={featuredServices} />
-                    <Link href={"/services"} className='bg-primary p-4 text-md font-semibold text-white rounded-md'>More Services</Link>
-                </div>
-            </div>
-
-            <div className='bg-primary/20 flex flex-col gap-5 p-5 align-middle justify-center items-center'>
-                <h1 className='text-3xl text-center text-gray-600 font-extrabold'>Why Choose Us?</h1>
-                <div className='grid grid-cols-1 gap-4 items-center md:grid-cols-3 lg:grid-cols-4'>
-                    {whyUs.map((item, idx) => (
-                        <motion.div
-                            key={idx}
-                            variants={revealVariants}
-                            initial="hidden"
-                            whileInView="visible"
-                            className='flex md:flex-row flex-col items-center gap-4'
-                            viewport={{ once: true }} // Only reveal once
-                        >
-                            <Image src={item.icon} alt={item.title} width={80} height={80} />
-                            <div className='flex flex-col gap-2'>
-                                <h3 className='text-lg text-gray-600 font-bold'>{item.title}</h3>
-                                <p>{item.description}</p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
-            <div className="w-full bg-slate-200 text-white flex  flex-col md:flex-row justify-center items-center px-1 md:px-5 lg:px-10 ">
-                <Image src={bgi} alt="repaire" width={800} height={800} className="w-full h-full" />
-                <div className="flex flex-col gap-2 w-full">
-                    <h1 className='text-2xl md:text-3xl font-extrabold text-gray-600 text-center '>
-                        Exclusive Draft beer line cleaning agent for <span className='text-primary'>BGI Ethiopia</span> </h1>
-                    <p className="text-center text-md text-gray-500 ">Our exclusive draft beer line cleaning agent ensures optimal hygiene and taste, maintaining the quality BGI Ethiopia is renowned for</p>
-
-
-                </div>
-            </div>
-
-            <div className='w-full flex flex-col gap-10 p-8  justify-center items-center '>
-                <h3 className='text-md font-semibold text-primary'>Our partners</h3>
-                <h1 className='text-4xl font-black text-gray-600 text-center'>A Trusted Service Provider In Ethiopia</h1>
-                <h1 className='text-2xl font-semibold text-gray-600 text-center'>Serving Top Companies Across Multiple Sectors</h1>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center'>
-                    {ourPartners.map((item, idx) => (
-                        <motion.div
-                            key={idx}
-                            variants={revealVariants}
-                            initial="hidden"
-                            whileInView="visible"
-                            className='flex md:flex-row flex-col items-center gap-4'
-                            viewport={{ once: true }} // Only reveal once
-                        >
-                            <Image src={item.icon} alt={item.title} width={80} height={80} />
-                            <div className='flex flex-col gap-2'>
-                                <h3 className='text-lg text-gray-600 font-bold'>{item.title}</h3>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
-            <div className=''>
-            </div>
-
-            <div className='w-full flex flex-col gap-10 p-8  justify-center items-center'>
-                <h3 className='text-md font-semibold text-primary'>Our Team</h3>
-                <h1 className='text-4xl font-black text-gray-600 text-center'>Our Dedicated Staff Members</h1>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 '>
-                    {ourStaff.map((staff, idx) => (
-                        <div key={idx} className='bg-slate-50 p-5 rounded-lg  shadow-lg flex flex-col w-[300px] gap-5'>
-                            <Image src={staff.img} alt="mts_staff" width={500} height={500} className='w-full h-2/3' />
-                            <h2 className='text-xl font-extrabold text-gray-700 p-2'>{staff.Name}</h2>
-                            <h4 className='text-md font-medium text-gray-600 p-3'>{staff.jobTitle}</h4>
-                        </div>
-                    ))}
-
-                </div>
-            </div>
-            <div className='w-full h-full relative flex flex-col lg:flex-row gap-10 items-center justify-center align-middle mb-5  '>
-                <div className='lg:absolute   lg:w-1/3 lg:h-[484px] z-50 top-0 left-0  p-2  bg-slate-50  rounded-r-full '>
-                    <Image src={becustomer} alt='be customer' width={500} height={500} className='w-full h-full' />
-                </div>
-                <div className='bg-blue-700 bg-[url("../../public/assets/blurry-gradient-haikei.svg)] flex flex-col justify-center align-middle items-center  p-10 gap-5 w-full'>
-                    <h3 className='text-md text-slate-200 font-bold'>contact us</h3>
-                    <h1 className='text-4xl font-black text-slate-200 text-center'>Become Our Customer <br />  & <br />Get Best Deals</h1>
-                    <div className='flex gap-5 items-center'>
-                        <div className='flex flex-col gap-5 flex-wrap'>
-                            <Link href={"mailto:mtstradingplc@gmail.com"} className="flex  flex-col md:flex-row flex-wrap gap-8  items-center text-sm hover:text-primary text-slate-200">
-                                <GoMail size={40} className=" p-1 bg-slate-50/10  rounded-lg text-slate-50/60" />
-                                <p className='text-lg font-medium ' > mtstradingplc@gmail.com</p>
-                            </Link>
-                            <Link href={"mailto:Mtscleaningreport@gmail.com"} className="flex  flex-col md:flex-row flex-wrap gap-8  items-center text-sm text-slate-200 hover:text-primary"><GoMail size={40} className="p-1 bg-slate-50/10  rounded-lg text-slate-50/60" />
-                                <p className='text-lg font-medium break-words '>   Mtscleaningreport@gmail.com</p>
-                            </Link>
-                            <div className="flex flex-col md:flex-row flex-wrap gap-8 items-center  text-lg font-medium text-slate-200"><LuPhone size={40} className="p-1 bg-slate-50/10  rounded-lg text-slate-50/60" /> <p >     0923423423/60</p></div>
-                            <div className="flex flex-col md:flex-row flex-wrap gap-8 items-center  text-lg font-medium text-slate-200"><LuPhone size={40} className="p-1 bg-slate-50/10  rounded-lg text-slate-50/60" /> <p >  0923423423/60</p></div>
-                        </div>
+            <div className='relative max-w-screen-xl mx-auto mt-10'>
+                <div className='flex flex-col gap-8 justify-center items-center p-4  border-green-500'>
+                    <h3 className='text-md font-semibold text-primary'>Feature services</h3>
+                    <h1 className='text-3xl font-extrabold text-gray-600 text-center'>Setting the Standard <br /> for Excellence <br />in Ethiopia</h1>
+                    <div className='flex flex-col gap-5 justify-center items-center'>
+                        <OurserviceGrid ourServicesItems={featuredServices} />
+                        <Link href={"/services"} className='bg-primary p-4 text-md font-semibold text-white rounded-md'>More Services</Link>
                     </div>
                 </div>
             </div>
+
+            <div className='relative max-w-screen-xl mx-auto mt-10'>
+                <div className='bg-primary/20 flex flex-col gap-5 p-5 align-middle justify-center items-center'>
+                    <h1 className='text-3xl text-center text-gray-600 font-extrabold'>Why Choose Us?</h1>
+                    <div className='grid grid-cols-1 gap-4 items-center md:grid-cols-3 lg:grid-cols-4'>
+                        {whyUs.map((item, idx) => (
+                            <motion.div
+                                key={idx}
+                                variants={revealVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                className='flex md:flex-row flex-col items-center gap-4'
+                                viewport={{ once: true }} // Only reveal once
+                            >
+                                <Image src={item.icon} alt={item.title} width={80} height={80} />
+                                <div className='flex flex-col gap-2'>
+                                    <h3 className='text-lg text-gray-600 font-bold'>{item.title}</h3>
+                                    <p>{item.description}</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            <div className='relative max-w-screen-xl mx-auto mt-10'>
+                <div className="bg-slate-200 text-white flex  flex-col md:flex-row justify-center items-center px-1 md:px-5 lg:px-10 ">
+                    <Image src={bgi} alt="repaire" width={800} height={800} className="w-full h-full" />
+                    <div className="flex flex-col gap-2 w-full">
+                        <h1 className='text-2xl md:text-3xl font-extrabold text-gray-600 text-center '>
+                            Exclusive Draft beer line cleaning agent for <span className='text-primary'>BGI Ethiopia</span> </h1>
+                        <p className="text-center text-md text-gray-500 ">Our exclusive draft beer line cleaning agent ensures optimal hygiene and taste, maintaining the quality BGI Ethiopia is renowned for</p>
+
+
+                    </div>
+                </div>
+            </div>
+            <div className='relative max-w-screen-xl mx-auto mt-10'>
+
+
+                <div className='w-full flex flex-col gap-10 p-8  justify-center items-center '>
+                    <h3 className='text-md font-semibold text-primary'>Our partners</h3>
+                    <h1 className='text-4xl font-black text-gray-600 text-center'>A Trusted Service Provider In Ethiopia</h1>
+                    <h1 className='text-2xl font-semibold text-gray-600 text-center'>Serving Top Companies Across Multiple Sectors</h1>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center'>
+                        {ourPartners.map((item, idx) => (
+                            <motion.div
+                                key={idx}
+                                variants={revealVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                className='flex md:flex-row flex-col items-center gap-4'
+                                viewport={{ once: true }} // Only reveal once
+                            >
+                                <Image src={item.icon} alt={item.title} width={80} height={80} />
+                                <div className='flex flex-col gap-2'>
+                                    <h3 className='text-lg text-gray-600 font-bold'>{item.title}</h3>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            <div className='relative max-w-screen-xl mx-auto mt-10'>
+                <div className='w-full flex flex-col gap-10 p-8  justify-center items-center'>
+                    <h3 className='text-md font-semibold text-primary'>Our Team</h3>
+                    <h1 className='text-4xl font-black text-gray-600 text-center'>Our Dedicated Staff Members</h1>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 '>
+                        {ourStaff.map((staff, idx) => (
+                            <div key={idx} className='bg-slate-50 p-5 rounded-lg  shadow-lg flex flex-col w-[300px] gap-5'>
+                                <Image src={staff.img} alt="mts_staff" width={500} height={500} className='w-full h-2/3' />
+                                <h2 className='text-xl font-extrabold text-gray-700 p-2'>{staff.Name}</h2>
+                                <h4 className='text-md font-medium text-gray-600 p-3'>{staff.jobTitle}</h4>
+                            </div>
+                        ))}
+
+                    </div>
+                </div>
+            </div>
+            <Contact />
         </div>
     );
 };

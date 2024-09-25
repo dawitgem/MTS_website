@@ -41,7 +41,7 @@ export function MobileNavBar() {
     };
 
     return (
-        <div className="lg:hidden max-w-full">
+        <div className="lg:hidden relative z-10 ">
             <button
                 className="text-3xl focus:outline-none"
                 onClick={toggleMenu}

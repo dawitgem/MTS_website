@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
+import { LayoutGrid } from './ui/layout-grid';
+import { div } from 'framer-motion/client';
 
 
 
@@ -33,24 +35,24 @@ const MainProjects = () => {
 
 
     return (
-        <div className="flex flex-col gap-5 justify-center items-center align-middle p-5">
-            <h3 className='text-md font-semibold text-primary'>Our Projects</h3>
-            <h1 className='text-4xl md:text-5xl font-extrabold text-gray-700 text-center leading-tight'>
-                Transformative Solution in Action   </h1>
-            <h6 className='text-lg text-gray-600 text-center max-w-2xl'>
-                We proudly collaborate with top brands and organizations in Ethiopia, ensuring reliable and professional cooling services tailored to diverse industries.
-            </h6>
-            <motion.div
-                ref={ref}
-                className='h-[800px] self-start w-full'
-                variants={containerVariant}
-                initial="hidden"
-                animate={controls}
-            >
-
-
-
-            </motion.div>
+        <div>
+            <div className="max-w-screen-xl mx-auto flex flex-col gap-5 justify-center items-center align-middle p-5">
+                <h3 className='text-md font-semibold text-primary'>Our Projects</h3>
+                <h1 className='relative text-4xl md:text-5xl font-extrabold text-gray-700 text-center w-full break-words  '>
+                    Transformative Solution in Action   </h1>
+                <h6 className='text-lg text-gray-600 text-center max-w-2xl'>
+                    We proudly collaborate with top brands and organizations in Ethiopia, ensuring reliable and professional cooling services tailored to diverse industries.
+                </h6>
+                <motion.div
+                    ref={ref}
+                    className='h-[800px] self-start w-full'
+                    variants={containerVariant}
+                    initial="hidden"
+                    animate={controls}
+                >
+                    <LayoutGrid cards={cards} />
+                </motion.div>
+            </div>
         </div>
     );
 };

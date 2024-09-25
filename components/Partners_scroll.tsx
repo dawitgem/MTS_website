@@ -7,29 +7,33 @@ const Partners = () => {
 
 
   return (
-    <section className=" flex flex-col gap-8 justify-center items-center">
-      <h3 className='text-md font-semibold text-primary'>our partners</h3>
-      <h1 className='text-4xl md:text-5xl font-extrabold text-gray-700 text-center leading-tight'>
-        Delivering Excellence Across <span className="text-primary">Multiple Sectors</span><br />
-        Partnering with <FlipWords words={partners} className="text-primary" />
-      </h1>
-      <p className='text-lg text-gray-600 text-center max-w-2xl'>
-        We proudly collaborate with top brands and organizations in Ethiopia, ensuring reliable and professional cooling services tailored to diverse industries.
-      </p>
-      <InfiniteMovingCards
-        items={partners_logo}
-        direction="left"
-        speed="slow"
-        pauseOnHover={true} // Pause scrolling on hover
-        className="partners-cards-container"
-      />
-      <InfiniteMovingCards
-        items={partners_logo}
-        speed="slow"
-        direction="right"  // Change to "right" if you want a different scroll direction
-        pauseOnHover={true} // Pause scrolling on hover
-        className="partners-cards-container"
-      />
+    <section className="">
+      <div className="max-w-screen-xl mx-auto flex flex-col gap-8 justify-center items-center">
+        <h3 className='text-md font-semibold text-primary'>our partners</h3>
+        <h1 className='text-4xl md:text-5xl font-extrabold text-gray-700 text-center leading-tight'>
+          Delivering Excellence Across <span className="text-primary">Multiple Sectors</span><br />
+          Partnering with <FlipWords words={partners} className="text-primary" />
+        </h1>
+        <p className='text-lg text-gray-600 text-center max-w-2xl'>
+          We proudly collaborate with top brands and organizations in Ethiopia, ensuring reliable and professional cooling services tailored to diverse industries.
+        </p>
+        <div className="relative w-full mx-auto flex flex-col gap-5 ">
+          <InfiniteMovingCards
+            items={partners_logo}
+            direction="left"
+            speed="slow"
+            pauseOnHover={true} // Pause scrolling on hover
+            className="partners-cards-container"
+          />
+          <InfiniteMovingCards
+            items={partners_logo}
+            speed="slow"
+            direction="right"  // Change to "right" if you want a different scroll direction
+            pauseOnHover={true} // Pause scrolling on hover
+            className="partners-cards-container"
+          />
+        </div>
+      </div>
     </section>
   );
 };
@@ -116,7 +120,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  lg:w-full  lg:max-w-7xl  overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20   overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] ",
         className
       )}
     >

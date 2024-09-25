@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { Button } from './ui/button';
 import Image from 'next/image';
+import { div } from 'framer-motion/client';
 
 const testimonials = [
     {
@@ -84,56 +85,58 @@ const Testimonials = () => {
     };
 
     return (
-        <motion.div
-            ref={ref}
-            className="w-full flex flex-col justify-center items-center gap-10 p-4 "
-            variants={containerVariants}
-            initial="hidden"
-            animate={controls}
-        >
-            <h3 className="text-lg text-primary font-bold">Testimonials</h3>
-            <h4 className="text-3xl text-gray-700 font-extrabold">What Our Clients Are Saying About MTS</h4>
+        <div className=''>
+            <motion.div
+                ref={ref}
+                className="relative w-full max-w-screen-xl mx-auto flex flex-col justify-center items-center gap-10 p-4 "
+                variants={containerVariants}
+                initial="hidden"
+                animate={controls}
+            >
+                <h3 className="text-lg text-primary font-bold">Testimonials</h3>
+                <h4 className="text-3xl text-gray-700 font-extrabold">What Our Clients Are Saying About MTS</h4>
 
-            {/* Testimonials sliding section */}
-            <div className="relative w-full overflow-hidden">
-                <motion.div
-                    className="flex transition-transform duration-500 ease-in-out"
-                    style={{ transform: `translateX(-${currentIndex * (isMobile ? 100 : 50)}%)` }} // Slide based on screen size
-                >
-                    {testimonials.map((testimonial, index) => (
-                        <div
-                            key={index}
-                            className={`min-w-[100%] h-[300px] lg:min-w-[50%] p-4 text-center bg-gray-100 m-2 rounded-md shadow-md flex flex-col lg:flex-row items-center gap-5`}
-                        >
-                            <div className="w-[80px] h-[80px]">
-                                <Image
-                                    src={testimonial.avatar}
-                                    alt={testimonial.name}
-                                    width={80}
-                                    height={80}
-                                    className="rounded-full w-full h-full"
-                                />
+                {/* Testimonials sliding section */}
+                <div className="relative w-full overflow-hidden">
+                    <motion.div
+                        className="flex transition-transform duration-500 ease-in-out"
+                        style={{ transform: `translateX(-${currentIndex * (isMobile ? 100 : 50)}%)` }} // Slide based on screen size
+                    >
+                        {testimonials.map((testimonial, index) => (
+                            <div
+                                key={index}
+                                className={`min-w-[100%] h-[300px] lg:min-w-[50%] p-4 text-center bg-gray-100 m-2 rounded-md shadow-md flex flex-col lg:flex-row items-center gap-5`}
+                            >
+                                <div className="w-[80px] h-[80px]">
+                                    <Image
+                                        src={testimonial.avatar}
+                                        alt={testimonial.name}
+                                        width={80}
+                                        height={80}
+                                        className="rounded-full w-full h-full"
+                                    />
+                                </div>
+                                <div>
+                                    <p className="text-lg sm:text-xl text-gray-700 font-bold">{testimonial.name}</p>
+                                    <p>CEO of BGI Ethiopia</p>
+                                    <p className="text-md sm:text-lg">{testimonial.comment}</p>
+                                </div>
                             </div>
-                            <div>
-                                <p className="text-lg sm:text-xl text-gray-700 font-bold">{testimonial.name}</p>
-                                <p>CEO of BGI Ethiopia</p>
-                                <p className="text-md sm:text-lg">{testimonial.comment}</p>
-                            </div>
-                        </div>
-                    ))}
-                </motion.div>
-            </div>
+                        ))}
+                    </motion.div>
+                </div>
 
-            {/* Navigation buttons */}
-            <div className="flex justify-between w-full max-w-xs">
-                <Button onClick={handlePrev} className="p-2 rounded-full bg-primary text-white hover:bg-gray-300">
-                    <FiChevronLeft size={40} />
-                </Button>
-                <Button onClick={handleNext} className="p-2 rounded-full bg-primary text-white hover:bg-gray-300">
-                    <FiChevronRight size={40} />
-                </Button>
-            </div>
-        </motion.div>
+                {/* Navigation buttons */}
+                <div className="flex justify-between w-full max-w-xs">
+                    <Button onClick={handlePrev} className="p-2 rounded-full bg-primary text-white hover:bg-gray-300">
+                        <FiChevronLeft size={40} />
+                    </Button>
+                    <Button onClick={handleNext} className="p-2 rounded-full bg-primary text-white hover:bg-gray-300">
+                        <FiChevronRight size={40} />
+                    </Button>
+                </div>
+            </motion.div>
+        </div>
     );
 };
 

@@ -38,13 +38,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`font-Poppins relative h-screen overflow-x-hidden overflow-auto  bg-slate-50  `}>
-        <>
-          <Header />
+      <body className={`font-Poppins`}>
+        <Header />
+
+        <main className="relative ">
           {children}
-          <Footer />
-          <FloatingWhatsAppButton />
-        </>
+        </main>
+        <Footer />
+        <FloatingWhatsAppButton />
         <Toaster />
       </body>
     </html>
