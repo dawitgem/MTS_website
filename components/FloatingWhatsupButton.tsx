@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import { RiWhatsappFill } from "react-icons/ri";
 
 const FloatingWhatsAppButton: FC = () => {
-    const whatsappNumber = "+251 930 29 48 60"; // Replace with your WhatsApp number
+    const whatsappNumber = "+251930294860"; // Replace with your WhatsApp number
     const [isVisible, setIsVisible] = useState(false);
     const [isBgVisible, setIsBgVisible] = useState(false); // For background toggle
     const [isSmallDevice, setIsSmallDevice] = useState(false); // To track if it's a small device
