@@ -84,7 +84,7 @@ const ProjectCard = ({ project, className }: { project: any, className: any }) =
             transition={{ duration: 0.5 }}
             className={`w-full relative rounded-lg overflow-hidden shadow-lg cursor-pointer ${className}`}
         >
-            <img src={project.image} alt={project.title} className="w-full h-[450px] object-cover" />
+            <Image src={project.image} alt={project.title} width={500} height={500} className="w-full h-[450px] object-cover" />
             <div className="absolute inset-0 flex flex-col gap-5 justify-end bg-black bg-opacity-60 text-white p-4">
                 <h3 className="text-xl font-semibold">{project.title}</h3>
                 <p className="text-gray-300">{project.description}</p>

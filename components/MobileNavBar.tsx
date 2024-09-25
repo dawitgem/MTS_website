@@ -29,8 +29,8 @@ const CustomModal = ({ isOpen, onClose, children }: { isOpen: any, onClose: any,
 
 export function MobileNavBar() {
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
     const isActive = (link: string) => {
-        const pathname = usePathname();
         console.log(pathname)
         return pathname === link;
 

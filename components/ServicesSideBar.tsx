@@ -9,8 +9,8 @@ import { GoMail } from 'react-icons/go';
 import { LuPhone } from 'react-icons/lu';
 
 const ServicesSideBar = () => {
+    const pathname = usePathname();
     const isActive = (link: string) => {
-        const pathname = usePathname();
         console.log(pathname)
         return pathname === link;
 
