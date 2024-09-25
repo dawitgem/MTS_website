@@ -63,7 +63,7 @@ export default function ContactForm() {
                             type="text"
                             {...register('name')}
                             placeholder="Your Name"
-                            className={`hover:border hover:border-primary active:border-primary md:placeholder:text-gray-600 ${errors.name ? 'border-red-500' : ''}`}
+                            className={`hover:border hover:border-primary p-8 active:border-primary placeholder:text-gray-600 ${errors.name ? 'border-red-500' : ''}`}
                         />
                         {errors.name && <p className="text-red-500">{errors.name.message as string}</p>}
                     </div>
@@ -74,7 +74,7 @@ export default function ContactForm() {
                             type="text"
                             {...register('phone')}
                             placeholder="Your Phone"
-                            className={`hover:border hover:border-primary active:border-primary md:placeholder:text-gray-600 ${errors.phone ? 'border-red-500' : ''}`}
+                            className={`hover:border hover:border-primary p-8 active:border-primary  placeholder:text-gray-600 ${errors.phone ? 'border-red-500' : ''}`}
                         />
                         {errors.phone && <p className="text-red-500">{errors.phone.message as string}</p>}
                     </div>
@@ -86,7 +86,7 @@ export default function ContactForm() {
                         type="text"
                         {...register('email')}
                         placeholder="Your Email"
-                        className={`hover:border hover:border-primary active:border-primary md:placeholder:text-gray-600 ${errors.email ? 'border-red-500' : ''}`}
+                        className={`hover:border hover:border-primary p-8 active:border-primary placeholder:text-gray-600 ${errors.email ? 'border-red-500' : ''}`}
                     />
                     {errors.email && <p className="text-red-500">{errors.email.message as string}</p>}
                 </div>
@@ -97,7 +97,7 @@ export default function ContactForm() {
                         type="text"
                         {...register('subject')}
                         placeholder="Subject"
-                        className={`hover:border hover:border-primary active:border-primary md:placeholder:text-gray-600`}
+                        className={`placeholder:text-gray-500 text-gray-500 p-8 hover:border hover:border-primary focus:border-primary `}
                     />
                 </div>
 
